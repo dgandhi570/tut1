@@ -1,0 +1,30 @@
+<head>
+  <link rel="stylesheet" href="/assets/alarm.css">
+</head>
+
+
+<body>
+<video class="w-50" autoplay loop muted style="width: 10px">
+  <source src="https://media.istockphoto.com/videos/minimal-abstract-motion-3d-rendering-clock-time-concept-time-lapse-video-id1149203367" type="video/mp4" width="10" height="10"/>
+</video>
+<br>
+<div class="container" style="position: absolute; top:5rem">
+        <form>
+            <div class="form-group" style="width: 500px">
+                <label for="exampleInputEmail1"><h4>Set Date & Time for Alarm</h4></label>
+                <input id="dateBox" type="date" class="form-control" id="date" aria-describedby="dateHelp" placeholder="Enter Date" inline="true">
+                <br>
+                <input id="timeBox" type="time" class="form-control" id="time" aria-describedby="timeHelp" placeholder="Enter Time" inline="true">
+                <%# <div class="invalid-feedback">Wrong Format</div> %>
+                <br>
+            </div>
+        </form>
+                <button id="setButton" class="btn btn-warning" inline="true">Submit</button>
+        </div>
+
+        
+
+<%= javascript_include_tag('alarm.js') %>
+</body>
+
+<%# "https://www.vecteezy.com/video/1349725-looping-alarm-clock-alarm-clock" %>

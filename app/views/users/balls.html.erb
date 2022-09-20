@@ -1,0 +1,109 @@
+<canvas id="canvas"></canvas>
+<p style="color: green"><%= notice %></p>
+<div  class="container" style="position: absolute; top:5rem">
+              <br>
+
+              <img src = "https://thumbs.dreamstime.com/b/happy-cat-closeup-portrait-funny-smile-cardboard-young-blue-background-102078702.jpg" style="width:300px" onmouseover="tryIt(this)" onmouseout="donttryIt(this)" id = "demo"> 
+                <h3>Just hover over the image</h3>
+              <br>
+              <button type="button" onclick="tryIt()">lessplayy</button>
+             
+              <div id="zooom" style="text-align:center; font-size:18;">
+                            <h1>Users</h1>
+
+                            <div id="users">
+                              <% @users.each do |user| %>
+                                <%= render user %>
+                                <p>
+                                  <%= link_to "Show this user", user %>
+                                </p>
+                              <% end %>
+                            </div>
+
+                            <%= link_to "New user", new_user_path %>
+                            <%# <%= render partial: 'shared/countdown'%> 
+                            
+
+              </div>
+</div>
+<div class="canvas">
+<%=render "canvas"%>
+</div>
+
+<style>
+.canvas{
+  position: absolute
+}
+</style>
+
+<script>
+
+
+
+
+function tryIt(){
+  if(demo.style.width==="300px"){
+    document.getElementById("demo").style.width="700px" 
+  }else{document.getElementById("demo").style.width="300px"}
+}
+
+function donttryIt(){
+  if(demo.style.width==="700px"){
+    document.getElementById("demo").style.width="300px" 
+  }else{document.getElementById("demo").style.width="700px"}
+}
+
+    // function zooom(){
+    //   for (let i=1; i<200; i++){
+    //   document.getElementById("zooom").font-size += i
+    //   }
+    // }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
